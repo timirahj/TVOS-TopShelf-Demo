@@ -53,7 +53,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inside-out-435.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YgV-yx-Aw9">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inside-out-435.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YgV-yx-Aw9">
                                                     <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                                                 </imageView>
                                             </subviews>
