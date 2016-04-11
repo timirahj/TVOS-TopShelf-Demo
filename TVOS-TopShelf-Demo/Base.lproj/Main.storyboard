@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="6fG-iK-ofC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--TV-->
+        <scene sceneID="DFb-6K-qmF">
+            <objects>
+                <viewController title="TV" id="Ata-iE-Hjt" customClass="TVViewController" customModule="TVOS_TopShelf_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DJK-ST-d0K"/>
+                        <viewControllerLayoutGuide type="bottom" id="e8y-ll-DBj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mNc-Sn-bqY">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TV" id="q9g-uO-KZu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBk-iX-h1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2312" y="115"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="SzI-Ru-Lyr">
+            <objects>
+                <viewController title="Movies" id="LAs-Od-N7D" customClass="MoviesViewController" customModule="TVOS_TopShelf_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="udA-vi-iaH"/>
+                        <viewControllerLayoutGuide type="bottom" id="PUQ-lF-SEC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="07t-kH-2rY">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xhi-y0-mc6">
+                                <rect key="frame" x="0.0" y="136" width="1920" height="940"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OHH-p2-N0T">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="400"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V95-PV-dQ9">
+                                    <size key="itemSize" width="640" height="480"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FeaturedCell" id="fei-De-YWC" customClass="FeaturedCollectionViewCell" customModule="TVOS_TopShelf_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inside-out-435.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="YgV-yx-Aw9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="featuredImage" destination="YgV-yx-Aw9" id="BUU-6a-BDI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Movies" id="0Xs-Bg-t6v"/>
+                    <connections>
+                        <outlet property="collectionView1" destination="OHH-p2-N0T" id="Qgf-CN-w13"/>
+                        <outlet property="scrollView" destination="Xhi-y0-mc6" id="cBa-nQ-EEf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbD-e3-UCT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2473" y="1257"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ixm-XW-nIb">
+            <objects>
+                <tabBarController id="6fG-iK-ofC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="epi-y1-HV5">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="LAs-Od-N7D" kind="relationship" relationship="viewControllers" id="Yuk-gX-Tsy"/>
+                        <segue destination="Ata-iE-Hjt" kind="relationship" relationship="viewControllers" id="q8f-bJ-7Ib"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qlL-7N-FG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="789"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="inside-out-435.jpg" width="435" height="580"/>
+    </resources>
+</document>
